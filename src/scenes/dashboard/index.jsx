@@ -1,7 +1,21 @@
-const Dashboard=()=>{
-    return(
-        <div>Dashboard</div>
-    )
-}
+import { Box } from "@mui/material";
+import Header from "../../components/Header";
 
-export default Dashboard
+const Dashboard = () => {
+	return (
+		<Box>
+			<Box
+				display="flex"
+				justifyContent="space-between"
+				alignItems="center"
+			>
+				<Header
+					title="DASHBOARD"
+					subTitle="Welcome to Dashboard"
+				/>
+			</Box>
+		</Box>
+	);
+};
+
+export default Dashboard;

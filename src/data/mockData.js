@@ -1,3 +1,4 @@
+import { tokens } from "../theme";
 export const mockDataTeam = [
     {
       id: 1,
@@ -73,7 +74,7 @@ export const mockDataTeam = [
     },
   ];
   
-/*  export const mockDataContacts = [
+  export const mockDataContacts = [
     {
       id: 1,
       name: "Jon Snow",
@@ -1278,4 +1279,4 @@ export const mockDataTeam = [
       id: "KOR",
       value: 171135,
     },
-  ]; */
+  ];
