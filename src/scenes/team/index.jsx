@@ -74,7 +74,10 @@ const Team = () => {
 	];
 
 	return (
-		<Box m="20px">
+		<Box
+			m="20px"
+			height="100%"
+		>
 			<Header
 				title="TEAM"
 				subTitle="Managing Team Members"
@@ -102,6 +105,7 @@ const Team = () => {
 					"& .MuiDataGrid-footerContainer": {
 						borderTop: "none",
 						backgroundColor: colors.blueAccent[700],
+						//mt: "20px",
 					},
 				}}
 			>

@@ -33,7 +33,10 @@ const Form = () => {
 		email: yup.string().email("Invalid Email").required("required"),
 	});
 	return (
-		<Box m="20px">
+		<Box
+			m="20px"
+			height="100%"
+		>
 			<Header
 				title="CREATE USER"
 				subTitle="Create a profile for new user"
@@ -147,7 +150,7 @@ const Form = () => {
 						<Box
 							display="flex"
 							justifyContent="end"
-							mt="20px"
+							mt="50px"
 						>
 							<Button
 								type="submit"
