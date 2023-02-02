@@ -14,8 +14,7 @@ const Geography = () => {
 				subTitle="A simple geography chart"
 			/>
 			<Box
-				height="75vh"
-				width="70vw"
+				height="100vh"
 				border={`1px solid ${colors.grey[100]}`}
 				borderRadius="4px"
 				marginLeft="3vw"
