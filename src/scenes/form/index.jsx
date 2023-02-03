@@ -35,7 +35,7 @@ const Form = () => {
 	return (
 		<Box
 			m="20px"
-			height="100%"
+			//height="100%"
 		>
 			<Header
 				title="CREATE USER"

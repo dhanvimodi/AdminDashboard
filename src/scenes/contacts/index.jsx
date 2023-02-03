@@ -60,7 +60,7 @@ const Contacts = () => {
 	return (
 		<Box
 			m="20px"
-			height="100%"
+			height={document.documentElement.clientHeight}
 		>
 			<Header
 				title="CONTACTS"
@@ -68,7 +68,7 @@ const Contacts = () => {
 			/>
 			<Box
 				m="40px 0 0 0"
-				height="75vh"
+				height="120%"
 				sx={{
 					"& .MuiDataGrid-root": {
 						border: "none",

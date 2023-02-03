@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
-import { Box, colors, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
@@ -19,6 +19,8 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { tokens } from "../../theme";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
+	const theme = useTheme();
+	const colors = tokens(theme.palette.mode);
 	return (
 		<MenuItem
 			active={selected === title}
@@ -91,23 +93,24 @@ const Sidebar = () => {
 					</MenuItem>
 
 					{/* User */}
-					{!isCollapsed && (
-						<MenuItem>
-							<Box mb="25px">
-								<Box
-									display="flex"
-									justifyContent="center"
-									alignItems="center"
-								>
-									<img
-										alt="user-profile"
-										src="../../assets/user.png"
-										width="100px"
-										height="100px"
-										style={{ cursor: "pointer", borderRadius: "50%" }}
-									/>
-								</Box>
 
+					<MenuItem>
+						<Box mb="25px">
+							<Box
+								display="flex"
+								justifyContent="center"
+								alignItems="center"
+								mb={isCollapsed ? "5px" : 0}
+							>
+								<img
+									alt="user-profile"
+									src="../../assets/user.png"
+									width={isCollapsed ? "40px" : "100px"}
+									height={isCollapsed ? "40px" : "100px"}
+									style={{ cursor: "pointer", borderRadius: "50%" }}
+								/>
+							</Box>
+							{!isCollapsed && (
 								<Box textAlign="center">
 									<Typography
 										variant="h3"
@@ -124,9 +127,9 @@ const Sidebar = () => {
 										Admin
 									</Typography>
 								</Box>
-							</Box>
-						</MenuItem>
-					)}
+							)}
+						</Box>
+					</MenuItem>
 
 					{/* Menu items */}
 

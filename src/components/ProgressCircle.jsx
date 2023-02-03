@@ -6,7 +6,6 @@ const ProgressCircle = ({ size = 40, progress = 0.7 }) => {
 	const colors = tokens(theme.palette.mode);
 	const angle = progress * 360;
 
-	console.log("In progress circle" + angle);
 	return (
 		<Box
 			sx={{
